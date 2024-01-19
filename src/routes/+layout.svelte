@@ -8,15 +8,13 @@
 	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 	:global(html) {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 		background-color: theme(colors.gray.100);
 		font-family: 'Inter', sans-serif;
+		scroll-behavior: smooth;
 	}
 
 	:global(h1) {
-		font-size: theme(fontSize.5xl) !important;
+		font-size: theme(fontSize.6xl) !important;
 	}
 
 	:global(h2) {
