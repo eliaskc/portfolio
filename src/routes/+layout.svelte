@@ -6,11 +6,15 @@
 
 <style lang="postcss">
 	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@500&display=swap');
 
 	:global(html) {
-		background-color: theme(colors.gray.100);
-		font-family: 'Inter', sans-serif;
+		background-color: #fafafa;
+		font-family: 'Bricolage Grotesque';
 		scroll-behavior: smooth;
+		cursor: url('icons8-cursor.svg'), auto;
 	}
 
 	:global(h1) {
