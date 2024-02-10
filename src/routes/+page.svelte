@@ -37,27 +37,22 @@
 
 <svelte:window bind:scrollY={scroll} />
 
-<main class="container mx-auto mt-16 gap-16 p-4 md:grid md:grid-cols-7">
-	<div class="max-md:hidden md:col-span-1">
-		<nav class="fixed top-1/2 flex flex-col justify-center gap-4">
+<main class="container mx-auto gap-12 md:grid md:grid-cols-12">
+	<div class="max-md:hidden md:col-span-2">
+		<nav class="fixed flex h-screen flex-col justify-center gap-4">
 			<a href="#about" class="text-left text-lg">About me</a>
 			<a href="#experience" class="text-left text-lg">Experience</a>
 			<a href="#education" class="text-left text-lg">Education</a>
 			<!-- TODO: Add theme switching button -->
-			<!-- <button class="border-2 border-black bg-gray-100 px-2 py-1">Switch it up</button> -->
 			<!-- TODO: Add light/dark/system theme switching buttons -->
-			<!-- <div>
-				<button class="border-2 border-black bg-gray-100 px-2 py-1">L</button>
-				<button class="border-2 border-black bg-gray-100 px-2 py-1">D</button>
-				<button class="border-2 border-black bg-gray-100 px-2 py-1">S</button>
-			</div> -->
 		</nav>
 	</div>
 
-	<div class="relative top-48 col-span-4">
+	<div class="relative top-48 col-span-7">
 		<h1
 			use:fadeInOnScroll
-			class="z-0 mb-32 font-['Bricolage_Grotesque'] text-4xl font-semibold lg:text-6xl"
+			class="z-0 mb-32 text-4xl font-semibold lg:text-6xl"
+			on:scroll={() => console.log('Hi')}
 		>
 			Hi, I'm Elias - a Software Engineer with a <i class="text-red-500">splash</i> of design.
 		</h1>
@@ -87,7 +82,7 @@
 
 	<aside
 		style:transform={`translate3d(0, ${scroll * 0.7}px, 0)`}
-		class="relative top-32 col-span-2 flex flex-col gap-4"
+		class="relative top-32 col-span-3 flex flex-col gap-4"
 	>
 		<img
 			class="mb-4 aspect-square w-full border-4 border-black object-cover"
