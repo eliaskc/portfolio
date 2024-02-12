@@ -1,38 +1,5 @@
 <script lang="ts">
 	let scroll: number;
-
-	function fadeInOnScroll(node: HTMLElement) {
-		const updateBlur = () => {
-			const rect = node.getBoundingClientRect();
-			const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-			const windowCenter = windowHeight / 2;
-			const elementCenter = rect.top + rect.height / 2;
-			const distanceFromCenter = Math.abs(windowCenter - elementCenter);
-			const visible = rect.top <= windowHeight && rect.bottom >= 0;
-
-			if (visible) {
-				const scaleFactor = 2;
-				const maxBlur = 5;
-				const blurIntensity = Math.min(1, distanceFromCenter / windowCenter / scaleFactor);
-				node.style.filter = `blur(${maxBlur * blurIntensity}px)`;
-			} else {
-				node.style.filter = '';
-			}
-		};
-
-		const onScroll = () => {
-			requestAnimationFrame(updateBlur);
-		};
-
-		window.addEventListener('scroll', onScroll);
-		updateBlur();
-
-		return {
-			destroy() {
-				window.removeEventListener('scroll', onScroll);
-			}
-		};
-	}
 </script>
 
 <svelte:window bind:scrollY={scroll} />
@@ -49,15 +16,11 @@
 	</div>
 
 	<div class="relative top-48 col-span-7">
-		<h1
-			use:fadeInOnScroll
-			class="z-0 mb-32 text-4xl font-semibold lg:text-6xl"
-			on:scroll={() => console.log('Hi')}
-		>
+		<h1 class="z-0 mb-32 text-4xl font-semibold lg:text-6xl">
 			Hi, I'm Elias - a Software Engineer with a <i class="text-red-500">splash</i> of design.
 		</h1>
 
-		<section id="about" class="mb-16 font-medium" use:fadeInOnScroll>
+		<section id="about" class="mb-16 font-medium">
 			<h2 class="my-8">
 				My goal is to create products that truly make a difference to users. I want to have a
 				positive impact, even if it’s something small like making someone’s grocery shopping
