@@ -1,7 +1,4 @@
 <script lang="ts">
-<<<<<<< Updated upstream
-	let scroll: number;
-=======
 	let scroll: number = 0;
 
 	function blurOnScroll(element: HTMLElement, newScroll: number) {
@@ -32,7 +29,6 @@
 			element.style.filter = `blur(${blurAmount}px)`;
 		}
 	}
->>>>>>> Stashed changes
 </script>
 
 <svelte:window bind:scrollY={scroll} />
@@ -54,11 +50,7 @@
 		</h1>
 
 		<section id="about" class="mb-16 font-medium">
-<<<<<<< Updated upstream
-			<h2 class="my-8">
-=======
 			<h2 class="my-8" use:blurOnScroll={scroll}>
->>>>>>> Stashed changes
 				My goal is to create products that truly make a difference to users. I want to have a
 				positive impact, even if it’s something small like making someone’s grocery shopping
 				slightly easier.
