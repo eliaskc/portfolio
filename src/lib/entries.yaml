@@ -1,0 +1,82 @@
+education:
+  master:
+    when: '2022-2024'
+    what: 'MSc in Software Engineering and Technologies'
+    description: "In spirit an extension of my bachelor's degree. Subjects ranging from functional and concurrent programming to behavioural software engineering and project management. Grade average: 4.82/5.0"
+    courses:
+      - Empirical software engineering
+      - Architectures for scale-out systems
+      - Principles of concurrent programming
+      - Functional programming
+      - Behavioural software engineering
+      - Project management
+      - Software engineering for AI/ML-enabled systems
+      - Quality assurance and testing
+  bachelor:
+    when: '2019-2022'
+    what: 'BSc in IT'
+    description: 'Broad programme covering a wide range of subjects that has given me a base on which I feel confident to tackle any challenge. I have learnt the fundamentals of software engineering, about specific tools and frameworks, how to effectively communicate as an engineer and team member, and much more. Grade average: 4.59/5.0'
+    courses:
+      - Object-oriented programming
+      - Web applications
+      - UI/UX-design
+      - AI/ML
+      - Linear algebra
+      - Calculus
+      - Data structures and algorithms
+      - Computer graphics
+
+experience:
+  ongoing:
+    when: 'Summer 2023'
+    employer: 'Ongoing WMS'
+    what: 'Software Developer'
+    desc: 'Designed and developed a dashboard for warehouse owner overview together with another summer intern.'
+    skills:
+      - ASP.NET Web Forms
+      - Javascript
+      - CSS
+      - Figma
+  centiro:
+    when: 'Summer 2022'
+    employer: 'Centiro Solutions AB'
+    what: 'Software Developer'
+    desc: 'Fullstack development in a research and development team. Built an internal angular package for feature toggling. Enhanced an existing internal web application for lifecycle management.'
+    skills:
+      - Angular
+      - C#
+      - SQL
+      - Azure DevOps
+      - ASP.NET
+
+projects:
+  masters_thesis:
+    when: '2024 (in progress)'
+    what: 'Master’s Thesis'
+    desc: Exploring a novel approach for traffic event retriveal from large-scale, unlabelled video data. Using deep learning and space-filling curves. In collaboration with Volvo Cars. Done together with 1 other student.
+  bachelor_thesis:
+    when: '2022'
+    what: "Bachelor's Thesis"
+    desc: Created a tool for hospitial visualization and overview. My focus was a neural network developed to predict patient flow based on historical data. On behalf of Norra Älvsborgs Länssjukhus. Completed together with 5 other students.
+
+skills:
+  languages:
+    - React
+    - Node.js
+    - Python
+    - Java
+    - C#
+    - SQL
+    - HTML
+    - CSS
+    - JavaScript
+    - TypeScript
+    - C++
+    - C
+    - Bootstrap
+    - Tailwind CSS
+  tools:
+    - Git
+    - Docker
+    - Kubernetes
+    - Figma
