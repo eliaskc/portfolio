@@ -45,13 +45,14 @@
 		<section id="education" class="h-96">
 			<h1 class="mb-4">Education</h1>
 			{#each data.education as edu (edu)}
-				<div class="mb-8">
+				<div class="mb-8 flex flex-col gap-2">
 					<h3>
 						{edu.what} —
 						<span class="italic">{edu.when}</span>
 					</h3>
 					<p>{edu.description}</p>
-					<div class="mt-2 flex gap-4">
+					<p>Grade average: {edu.grade}/5.0</p>
+					<div class="flex gap-4">
 						{#each edu.courses as course (course)}
 							<span>{course}</span>
 						{/each}

@@ -3,7 +3,8 @@
 		{
 			"when": "2022-2024",
 			"what": "MSc in Software Engineering and Technologies",
-			"description": "In spirit an extension of my bachelor's degree. Subjects ranging from functional and concurrent programming to behavioural software engineering and project management. Grade average: 4.82/5.0",
+			"description": "In spirit an extension of my bachelor's degree. Subjects ranging from functional and concurrent programming to behavioural software engineering and project management.",
+			"grade": "4.82",
 			"courses": [
 				"Empirical software engineering",
 				"Architectures for scale-out systems",
@@ -16,7 +17,8 @@
 		{
 			"when": "2019-2022",
 			"what": "BSc in Information Technology",
-			"description": "Broad programme covering a wide range of subjects that has given me a base on which I feel confident to tackle any challenge. I have learnt the fundamentals of software engineering, about specific tools and frameworks, how to effectively communicate as an engineer and team member, and much more. Grade average: 4.59/5.0",
+			"description": "Broad programme covering a wide range of subjects that has given me a base on which I feel confident to tackle any challenge. I have learnt the fundamentals of software engineering, about specific tools and frameworks, how to effectively communicate as an engineer and team member, and much more.",
+			"grade": "4.59",
 			"courses": [
 				"Object-oriented programming",
 				"Web applications",
