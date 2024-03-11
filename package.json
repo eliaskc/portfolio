@@ -38,6 +38,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.4.2"
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "js-yaml": "^4.1.0"
   }
 }

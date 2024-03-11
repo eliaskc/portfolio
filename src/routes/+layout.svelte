@@ -14,14 +14,22 @@
 		background-color: #fafafa;
 		font-family: 'Bricolage Grotesque';
 		scroll-behavior: smooth;
-		cursor: url('icons8-cursor.svg'), auto;
+		/* cursor: url('icons8-cursor.svg'), auto; */
 	}
 
 	:global(h1) {
-		font-size: theme(fontSize.6xl) !important;
+		font-size: theme(fontSize.5xl) !important;
 	}
 
 	:global(h2) {
 		font-size: theme(fontSize.3xl) !important;
+	}
+
+	:global(h3) {
+		font-size: theme(fontSize.2xl) !important;
+	}
+
+	:global(h4) {
+		font-size: theme(fontSize.xl) !important;
 	}
 </style>

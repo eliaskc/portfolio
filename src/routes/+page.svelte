@@ -1,4 +1,5 @@
 <script lang="ts">
+	import data from '$lib/data.json';
 	let scroll: number;
 </script>
 
@@ -16,31 +17,48 @@
 	</div>
 
 	<div class="relative top-48 col-span-7">
-		<h1 class="z-0 mb-32 text-4xl font-semibold lg:text-6xl">
-			Hi, I'm Elias - a Software Engineer with a <i class="text-red-500">splash</i> of design.
-		</h1>
-
 		<section id="about" class="mb-16 font-medium">
-			<h2 class="my-8">
-				My goal is to create products that truly make a difference to users. I want to have a
-				positive impact, even if it’s something small like making someone’s grocery shopping
-				slightly easier.
-			</h2>
-
-			<h2 class="my-8">
-				I love learning new things and my biggest strength is the speed at which I’m able to do so.
-			</h2>
-
-			<h2 class="my-8">
-				Born and raised in Gothenburg, I’ve graduated from Chalmers University of Technology with a
-				Msc. in Software Engineering. My education has given me a broad range of skills, from data
-				science & AI to UI/UX and everything in between.
-			</h2>
+			<h1 class="z-0 mb-16 !text-6xl font-semibold">
+				Hi, I'm Elias - a Software Engineer with a <i class="text-red-500">splash</i> of design.
+			</h1>
+			{#each data.about.text as paragraph (paragraph)}
+				<h2 class="my-8">{paragraph}</h2>
+			{/each}
 		</section>
 
-		<section id="experience" class="mb-16 h-96 border-2 border-black"></section>
+		<section id="experience" class="mb-16">
+			<h1 class="mb-4">Experience</h1>
+			{#each data.experience as exp (exp)}
+				<div class="mb-8">
+					<h3>{exp.employer} — <span class="italic">{exp.what}</span></h3>
+					<p class="italic">{exp.when}</p>
+					<p>{exp.description}</p>
+					<div class="mt-2 flex gap-4">
+						{#each exp.skills as skill (skill)}
+							<span>{skill}</span>
+						{/each}
+					</div>
+				</div>
+			{/each}
+		</section>
 
-		<section id="education" class="h-96 border-2 border-blue-700"></section>
+		<section id="education" class="h-96">
+			<h1 class="mb-4">Education</h1>
+			{#each data.education as edu (edu)}
+				<div class="mb-8">
+					<h3>
+						{edu.what} —
+						<span class="italic">{edu.when}</span>
+					</h3>
+					<p>{edu.description}</p>
+					<div class="mt-2 flex gap-4">
+						{#each edu.courses as course (course)}
+							<span>{course}</span>
+						{/each}
+					</div>
+				</div>
+			{/each}
+		</section>
 	</div>
 
 	<aside
@@ -52,13 +70,22 @@
 			src="elias.png"
 			alt="Portrait of me"
 		/>
-		<div>
-			<h3 class="text-lg font-semibold">Skills</h3>
-			<p>python - java - react - figma - ...</p>
+		<div class="flex gap-4">
+			<a href={`mailto:${data.about.email}`}>
+				<img class="h-8 w-8" src="email.svg" alt="Email icon" />
+			</a>
+			<a href={data.about.github}>
+				<img class="h-8 w-8" src="github.svg" alt="Github link" />
+			</a>
 		</div>
+		<h3 class="text-lg font-semibold">Skills</h3>
 		<div>
-			<h3 class="text-lg font-semibold">Interests</h3>
-			<p>gaming - design - football - ...</p>
+			{#each data.about.skills.languages as language (language)}
+				<div>{language}</div>
+			{/each}
+			{#each data.about.skills.tools as tool (tool)}
+				<div>{tool}</div>
+			{/each}
 		</div>
 	</aside>
 </main>
