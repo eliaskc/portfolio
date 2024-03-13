@@ -6,8 +6,8 @@
 <svelte:window bind:scrollY={scroll} />
 
 <main class="container mx-auto gap-12 md:grid md:grid-cols-12">
-	<div class="max-md:hidden md:col-span-2">
-		<nav class="fixed flex h-screen flex-col justify-center gap-4">
+	<div class="col-span-2 max-md:hidden">
+		<nav class="font-bricolage-grotesque fixed flex h-screen flex-col justify-center gap-4">
 			<a href="#about" class="text-left text-lg">About me</a>
 			<a href="#experience" class="text-left text-lg">Experience</a>
 			<a href="#education" class="text-left text-lg">Education</a>
@@ -22,7 +22,7 @@
 				Hi, I'm Elias - a Software Engineer with a <i class="text-red-500">splash</i> of design.
 			</h1>
 			{#each data.about.text as paragraph (paragraph)}
-				<h2 class="my-8">{paragraph}</h2>
+				<p class="my-8 text-3xl">{paragraph}</p>
 			{/each}
 		</section>
 
