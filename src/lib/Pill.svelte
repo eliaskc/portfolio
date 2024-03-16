@@ -1,8 +1,12 @@
-<script>
+<script lang="ts">
 	export let text = 'Default Text';
 	export let category = '';
 
-	const categoryColorMap = {
+	interface CategoryColorMap {
+		[key: string]: string;
+	}
+
+	const categoryColorMap: CategoryColorMap = {
 		web: 'bg-blue-500',
 		backend: 'bg-green-500',
 		programming: 'bg-red-500',
