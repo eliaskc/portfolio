@@ -69,7 +69,9 @@
 	>
 		<img
 			class="mb-4 aspect-square w-full border-4 border-black object-cover"
-			src="elias.png"
+			src="elias_320.png"
+			srcset="elias_320.png 320w, elias_768.png 768w, elias_1024.png 1024w"
+			sizes="(max-width: 320px) 280px, (max-width: 768px) 728px, (max-width: 1024px) 984px"
 			alt="Portrait of me"
 		/>
 		<div class="flex flex-col">
