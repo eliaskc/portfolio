@@ -12,30 +12,23 @@
 	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 	:global(html) {
-		background-color: #fafafa;
-		scroll-behavior: smooth;
-		font-family: 'Bricolage Grotesque', sans-serif;
-		color: #212427;
 		/* cursor: url('icons8-cursor.svg'), auto; */
+		@apply scroll-smooth bg-slate-100 font-bricolage-grotesque text-gray-900;
 	}
 
 	:global(h1) {
-		font-family: 'Bricolage Grotesque';
-		font-size: theme(fontSize.5xl) !important;
+		@apply text-5xl;
 	}
 
 	:global(h2) {
-		font-family: 'Bricolage Grotesque';
-		font-size: theme(fontSize.3xl) !important;
+		@apply text-3xl;
 	}
 
 	:global(h3) {
-		font-family: 'Bricolage Grotesque';
-		font-size: theme(fontSize.2xl) !important;
+		@apply text-2xl;
 	}
 
 	:global(h4) {
-		font-family: 'Bricolage Grotesque';
-		font-size: theme(fontSize.xl) !important;
+		@apply text-xl;
 	}
 </style>

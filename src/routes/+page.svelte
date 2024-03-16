@@ -1,5 +1,6 @@
 <script lang="ts">
 	import data from '$lib/data.json';
+	import Pill from '$lib/Pill.svelte';
 	let scroll: number;
 </script>
 
@@ -7,7 +8,7 @@
 
 <main class="container mx-auto gap-12 md:grid md:grid-cols-12">
 	<div class="col-span-2 max-md:hidden">
-		<nav class="font-bricolage-grotesque fixed flex h-screen flex-col justify-center gap-4">
+		<nav class="fixed flex h-screen flex-col justify-center gap-4 font-bricolage-grotesque">
 			<a href="#about" class="text-left text-lg">About me</a>
 			<a href="#experience" class="text-left text-lg">Experience</a>
 			<a href="#education" class="text-left text-lg">Education</a>
@@ -33,9 +34,9 @@
 					<h3>{exp.employer} — <span class="italic">{exp.what}</span></h3>
 					<p class="italic">{exp.when}</p>
 					<p>{exp.description}</p>
-					<div class="mt-2 flex gap-4">
+					<div class="mt-2 flex gap-2">
 						{#each exp.skills as skill (skill)}
-							<span>{skill}</span>
+							<Pill text={skill.text} category={skill.category}></Pill>
 						{/each}
 					</div>
 				</div>
@@ -52,9 +53,9 @@
 					</h3>
 					<p>{edu.description}</p>
 					<p>Grade average: {edu.grade}/5.0</p>
-					<div class="flex gap-4">
+					<div class="flex flex-wrap gap-2">
 						{#each edu.courses as course (course)}
-							<span>{course}</span>
+							<Pill text={course} category="course"></Pill>
 						{/each}
 					</div>
 				</div>
@@ -71,21 +72,15 @@
 			src="elias.png"
 			alt="Portrait of me"
 		/>
-		<div class="flex gap-4">
-			<a href={`mailto:${data.about.email}`}>
-				<img class="h-8 w-8" src="email.svg" alt="Email icon" />
-			</a>
-			<a href={data.about.github}>
-				<img class="h-8 w-8" src="github.svg" alt="Github link" />
-			</a>
+		<div class="flex flex-col">
+			<a href={`mailto:${data.about.email}`} class="text-blue-500 hover:underline"
+				>{data.about.email}</a
+			>
+			<a href={data.about.github} class="text-blue-500 hover:underline">github.com/eliaskc</a>
 		</div>
-		<h3 class="text-lg font-semibold">Skills</h3>
-		<div>
-			{#each data.about.skills.languages as language (language)}
-				<div>{language}</div>
-			{/each}
-			{#each data.about.skills.tools as tool (tool)}
-				<div>{tool}</div>
+		<div class="flex flex-wrap gap-2">
+			{#each data.about.skills as skill (skill)}
+				<Pill text={skill.text} category={skill.category}></Pill>
 			{/each}
 		</div>
 	</aside>

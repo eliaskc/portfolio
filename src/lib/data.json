@@ -1,123 +1,168 @@
 {
-  "education": [
-    {
-      "when": "2022-2024",
-      "what": "MSc in Software Engineering and Technologies",
-      "description": "In spirit an extension of my bachelor's degree. Subjects ranging from functional and concurrent programming to behavioural software engineering and project management.",
-      "grade": "4.82",
-      "courses": [
-        "Empirical software engineering",
-        "Architectures for scale-out systems",
-        "Behavioural software engineering",
-        "Project management",
-        "Software engineering for AI/ML-enabled systems",
-        "Quality assurance and testing"
-      ]
-    },
-    {
-      "when": "2019-2022",
-      "what": "BSc in Information Technology",
-      "description": "Broad programme covering a wide range of subjects that has given me a base on which I feel confident to tackle any challenge. I have learnt the fundamentals of software engineering, about specific tools and frameworks, how to effectively communicate as an engineer and team member, and much more.",
-      "grade": "4.59",
-      "courses": [
-        "Object-oriented programming",
-        "Web applications",
-        "UI/UX-design",
-        "Introduction to data science and AI",
-        "Data structures and algorithms",
-        "Computer graphics"
-      ]
-    }
-  ],
-  "experience": [
-    {
-      "when": "Summer 2023",
-      "employer": "Ongoing WMS",
-      "what": "Software Developer",
-      "description": "Designed and developed a dashboard for warehouse owner overview together with another summer intern.",
-      "skills": [
-        "ASP.NET Web Forms",
-        "Javascript",
-        "CSS",
-        "Figma"
-      ]
-    },
-    {
-      "when": "Summer 2022",
-      "employer": "Centiro Solutions AB",
-      "what": "Software Developer",
-      "description": "Fullstack development in a research and development team. Built an internal angular package for feature toggling. Enhanced an existing internal web application for lifecycle management.",
-      "skills": [
-        "Angular",
-        "C#",
-        "SQL",
-        "Azure DevOps",
-        "ASP.NET"
-      ]
-    }
-  ],
-  "projects": {
-    "birkabo": {
-      "when": "2023",
-      "what": "Birkabo",
-      "desc": "A web application for the property management company Birkabo. The website provides information for current and potential tenants.",
-      "skills": [
-        "NextJS",
-        "Node.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Figma"
-      ]
-    },
-  },
-  "masters_thesis": {
-    "when": "2024 (in progress)",
-    "what": "Master’s Thesis",
-    "desc": "Exploring a novel approach for traffic event retriveal from large-scale, unlabelled video data. Using deep learning and space-filling curves. In collaboration with Volvo Cars. Done together with 1 other student."
-  },
-  "bachelor_thesis": {
-    "when": "2022",
-    "what": "Bachelor’s Thesis",
-    "desc": "Created a tool for hospitial visualization and overview. My focus was a neural network developed to predict patient flow based on historical data. On behalf of Norra Älvsborgs Länssjukhus. Completed together with 5 other students."
-  }
-},
-"about": {
-  "name": "Elias Kjellberg Carlson",
-  "location": "Gothenburg, Sweden",
-  "email": "eliaskjellbergcarlson@gmail.com",
-  "github": "https://github.com/eliaskc",
-  "languages": [
-    "Swedish",
-    "English",
-    "French (basic)"
-  ],
-  "text": [
-    "I want to build products that excite me and that make a difference, whether it be world-altering or helping someone's everyday life be slightly more enjoyable.",
-    "I love learning new things and believe my biggest strength is the speed at which I’m able to do so. My MSc at Chalmers has given me a foundation from which I'm eager to leap forward and continue learning."
-  ],
-  "skills": {
-    "languages": [
-      "React",
-      "Node.js",
-      "Python",
-      "Java",
-      "C#",
-      "SQL",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
-      "C++",
-      "C",
-      "Bootstrap",
-      "Tailwind CSS"
-    ],
-    "tools": [
-      "Git",
-      "Docker",
-      "Kubernetes",
-      "Figma"
-    ]
-  }
-}
+	"education": [
+		{
+			"when": "2022-2024",
+			"what": "MSc in Software Engineering and Technologies",
+			"description": "In spirit an extension of my bachelor's degree. Subjects ranging from functional and concurrent programming to behavioural software engineering and project management.",
+			"grade": "4.82",
+			"courses": [
+				"Empirical software engineering",
+				"Architectures for scale-out systems",
+				"Behavioural software engineering",
+				"Project management",
+				"Software engineering for AI/ML-enabled systems",
+				"Quality assurance and testing"
+			]
+		},
+		{
+			"when": "2019-2022",
+			"what": "BSc in Information Technology",
+			"description": "Broad programme covering a wide range of subjects that has given me a base on which I feel confident to tackle any challenge. I have learnt the fundamentals of software engineering, about specific tools and frameworks, how to effectively communicate as an engineer and team member, and much more.",
+			"grade": "4.59",
+			"courses": [
+				"Object-oriented programming",
+				"Web applications",
+				"UI/UX-design",
+				"Introduction to data science and AI",
+				"Data structures and algorithms",
+				"Computer graphics"
+			]
+		}
+	],
+	"experience": [
+		{
+			"when": "Summer 2023",
+			"employer": "Ongoing WMS",
+			"what": "Software Developer",
+			"description": "Designed and developed a dashboard for warehouse owner overview together with another summer intern.",
+			"skills": [
+				{ "text": "ASP.NET Web Forms", "category": "backend" },
+				{ "text": "Javascript", "category": "web" },
+				{ "text": "CSS", "category": "styling" },
+				{ "text": "Figma", "category": "tools" }
+			]
+		},
+		{
+			"when": "Summer 2022",
+			"employer": "Centiro Solutions AB",
+			"what": "Software Developer",
+			"description": "Fullstack development in a research and development team. Built an internal angular package for feature toggling. Enhanced an existing internal web application for lifecycle management.",
+			"skills": [
+				{ "text": "Angular", "category": "web" },
+				{ "text": "C#", "category": "backend" },
+				{ "text": "SQL", "category": "database" },
+				{ "text": "Azure DevOps", "category": "tools" },
+				{ "text": "ASP.NET", "category": "backend" }
+			]
+		}
+	],
+	"projects": {
+		"birkabo": {
+			"when": "2023",
+			"what": "Birkabo",
+			"desc": "A web application for the property management company Birkabo. The website provides information for current and potential tenants.",
+			"skills": [
+				{ "text": "NextJS", "category": "web" },
+				{ "text": "Node.js", "category": "backend" },
+				{ "text": "TypeScript", "category": "web" },
+				{ "text": "Tailwind CSS", "category": "styling" },
+				{ "text": "Figma", "category": "tools" }
+			]
+		},
+		"masters_thesis": {
+			"when": "2024 (in progress)",
+			"what": "Master’s Thesis",
+			"desc": "Exploring a novel approach for traffic event retriveal from large-scale, unlabelled video data. Using deep learning and space-filling curves. In collaboration with Volvo Cars. Done together with 1 other student."
+		},
+		"bachelor_thesis": {
+			"when": "2022",
+			"what": "Bachelor’s Thesis",
+			"desc": "Created a tool for hospitial visualization and overview. My focus was a neural network developed to predict patient flow based on historical data. On behalf of Norra Älvsborgs Länssjukhus. Completed together with 5 other students."
+		}
+	},
+	"about": {
+		"name": "Elias Kjellberg Carlson",
+		"location": "Gothenburg, Sweden",
+		"email": "eliaskjellbergcarlson@gmail.com",
+		"github": "https://github.com/eliaskc",
+		"languages": ["Swedish", "English", "French (basic)"],
+		"text": [
+			"I want to build products that excite me and that make a difference, whether it be world-altering or helping someone's everyday life be slightly more enjoyable.",
+			"I love learning new things and believe my biggest strength is the speed at which I’m able to do so. My MSc at Chalmers has given me a foundation from which I'm eager to leap forward and continue learning."
+		],
+		"skills": [
+			{
+				"text": "React",
+				"category": "web"
+			},
+			{
+				"text": "Node.js",
+				"category": "backend"
+			},
+			{
+				"text": "Python",
+				"category": "programming"
+			},
+			{
+				"text": "Java",
+				"category": "programming"
+			},
+			{
+				"text": "C#",
+				"category": "programming"
+			},
+			{
+				"text": "SQL",
+				"category": "database"
+			},
+			{
+				"text": "HTML",
+				"category": "web"
+			},
+			{
+				"text": "CSS",
+				"category": "styling"
+			},
+			{
+				"text": "JavaScript",
+				"category": "web"
+			},
+			{
+				"text": "TypeScript",
+				"category": "web"
+			},
+			{
+				"text": "C++",
+				"category": "programming"
+			},
+			{
+				"text": "C",
+				"category": "programming"
+			},
+			{
+				"text": "Bootstrap",
+				"category": "styling"
+			},
+			{
+				"text": "Tailwind CSS",
+				"category": "styling"
+			},
+			{
+				"text": "Git",
+				"category": "tools"
+			},
+			{
+				"text": "Docker",
+				"category": "tools"
+			},
+			{
+				"text": "Kubernetes",
+				"category": "tools"
+			},
+			{
+				"text": "Figma",
+				"category": "tools"
+			}
+		]
+	}
 }
