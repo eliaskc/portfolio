@@ -1,5 +1,7 @@
 <script lang="ts">
-	import data from '$lib/data.json';
+	import experience from '$lib/experience.json';
+	import education from '$lib/education.json';
+	import about from '$lib/about.json';
 	import Pill from '$lib/Pill.svelte';
 	let scroll: number;
 </script>
@@ -22,14 +24,14 @@
 			<h1 class="z-0 mb-16 !text-6xl font-semibold">
 				Hi, I'm Elias - a Software Engineer with a <i class="text-red-500">splash</i> of design.
 			</h1>
-			{#each data.about.text as paragraph (paragraph)}
+			{#each about.text as paragraph (paragraph)}
 				<p class="my-8 text-3xl">{paragraph}</p>
 			{/each}
 		</section>
 
 		<section id="experience" class="mb-16">
 			<h1 class="mb-4">Experience</h1>
-			{#each data.experience as exp (exp)}
+			{#each experience as exp (exp)}
 				<div class="mb-8">
 					<h3>{exp.employer} — <span class="italic">{exp.what}</span></h3>
 					<p class="italic">{exp.when}</p>
@@ -45,19 +47,25 @@
 
 		<section id="education" class="h-96">
 			<h1 class="mb-4">Education</h1>
-			{#each data.education as edu (edu)}
+			{#each education as edu (edu)}
 				<div class="mb-8 flex flex-col gap-2">
 					<h3>
-						{edu.what} —
-						<span class="italic">{edu.when}</span>
+						{edu.title} — <span class="italic">{edu.what}</span>
 					</h3>
+					<p class="italic">{edu.when}</p>
 					<p>{edu.description}</p>
-					<p>Grade average: {edu.grade}/5.0</p>
-					<div class="flex flex-wrap gap-2">
-						{#each edu.courses as course (course)}
-							<Pill text={course} category="course"></Pill>
-						{/each}
-					</div>
+
+					{#if edu.grade}
+						<p>Grade average: {edu.grade}/5.0</p>
+					{/if}
+
+					{#if edu.skills && edu.skills.length > 0}
+						<div class="flex flex-wrap gap-2">
+							{#each edu.skills as skill (skill)}
+								<Pill text={skill.text} category={skill.category}></Pill>
+							{/each}
+						</div>
+					{/if}
 				</div>
 			{/each}
 		</section>
@@ -75,13 +83,11 @@
 			alt="Portrait of me"
 		/>
 		<div class="flex flex-col">
-			<a href={`mailto:${data.about.email}`} class="text-blue-500 hover:underline"
-				>{data.about.email}</a
-			>
-			<a href={data.about.github} class="text-blue-500 hover:underline">github.com/eliaskc</a>
+			<a href={`mailto:${about.email}`} class="text-blue-500 hover:underline">{about.email}</a>
+			<a href={about.github} class="text-blue-500 hover:underline">github.com/eliaskc</a>
 		</div>
 		<div class="flex flex-wrap gap-2">
-			{#each data.about.skills as skill (skill)}
+			{#each about.skills as skill (skill)}
 				<Pill text={skill.text} category={skill.category}></Pill>
 			{/each}
 		</div>

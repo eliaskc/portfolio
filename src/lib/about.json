@@ -1,0 +1,85 @@
+{
+	"name": "Elias Kjellberg Carlson",
+	"location": "Gothenburg, Sweden",
+	"email": "eliaskjellbergcarlson@gmail.com",
+	"github": "https://github.com/eliaskc",
+	"languages": ["Swedish", "English", "French (basic)"],
+	"text": [
+		"I want to build products that excite me and that make a difference, whether it be world-altering or helping someone's everyday life be slightly more enjoyable.",
+		"I love learning new things and believe my biggest strength is the speed at which I’m able to do so. My MSc at Chalmers has given me a foundation from which I'm eager to leap forward and continue learning."
+	],
+	"skills": [
+		{
+			"text": "React",
+			"category": "web"
+		},
+		{
+			"text": "Node.js",
+			"category": "backend"
+		},
+		{
+			"text": "Python",
+			"category": "programming"
+		},
+		{
+			"text": "Java",
+			"category": "programming"
+		},
+		{
+			"text": "C#",
+			"category": "programming"
+		},
+		{
+			"text": "SQL",
+			"category": "database"
+		},
+		{
+			"text": "HTML",
+			"category": "web"
+		},
+		{
+			"text": "CSS",
+			"category": "styling"
+		},
+		{
+			"text": "JavaScript",
+			"category": "web"
+		},
+		{
+			"text": "TypeScript",
+			"category": "web"
+		},
+		{
+			"text": "C++",
+			"category": "programming"
+		},
+		{
+			"text": "C",
+			"category": "programming"
+		},
+		{
+			"text": "Bootstrap",
+			"category": "styling"
+		},
+		{
+			"text": "Tailwind CSS",
+			"category": "styling"
+		},
+		{
+			"text": "Git",
+			"category": "tools"
+		},
+		{
+			"text": "Docker",
+			"category": "tools"
+		},
+		{
+			"text": "Kubernetes",
+			"category": "tools"
+		},
+		{
+			"text": "Figma",
+			"category": "tools"
+		}
+	]
+}

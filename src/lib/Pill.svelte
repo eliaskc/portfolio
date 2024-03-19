@@ -13,6 +13,7 @@
 		database: 'bg-yellow-500',
 		styling: 'bg-pink-500',
 		tools: 'bg-gray-500',
+		AI: 'bg-purple-500',
 		course: 'bg-indigo-500'
 	};
 

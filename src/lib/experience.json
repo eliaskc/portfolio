@@ -1,0 +1,79 @@
+[
+	{
+		"when": "2023",
+		"employer": "Birkabo",
+		"what": "Web Development Project",
+		"link": "https://www.birkabo.se/",
+		"description": "A web application for the property management company Birkabo. The website provides information for current and potential tenants.",
+		"skills": [
+			{
+				"text": "NextJS",
+				"category": "web"
+			},
+			{
+				"text": "TypeScript",
+				"category": "web"
+			},
+			{
+				"text": "Tailwind CSS",
+				"category": "styling"
+			},
+			{
+				"text": "Figma",
+				"category": "tools"
+			}
+		]
+	},
+	{
+		"when": "Summer 2023",
+		"employer": "Ongoing WMS",
+		"what": "Software Developer",
+		"description": "Designed and developed a dashboard for warehouse owner overview together with another summer intern.",
+		"skills": [
+			{
+				"text": "ASP.NET Web Forms",
+				"category": "backend"
+			},
+			{
+				"text": "Javascript",
+				"category": "web"
+			},
+			{
+				"text": "CSS",
+				"category": "styling"
+			},
+			{
+				"text": "Figma",
+				"category": "tools"
+			}
+		]
+	},
+	{
+		"when": "Summer 2022",
+		"employer": "Centiro Solutions AB",
+		"what": "Software Developer",
+		"description": "Fullstack development in a research and development team. Built an internal angular package for feature toggling. Enhanced an existing internal web application for lifecycle management.",
+		"skills": [
+			{
+				"text": "Angular",
+				"category": "web"
+			},
+			{
+				"text": "C#",
+				"category": "backend"
+			},
+			{
+				"text": "SQL",
+				"category": "database"
+			},
+			{
+				"text": "Azure DevOps",
+				"category": "tools"
+			},
+			{
+				"text": "ASP.NET",
+				"category": "backend"
+			}
+		]
+	}
+]
