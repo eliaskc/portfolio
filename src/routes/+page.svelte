@@ -49,20 +49,22 @@
 			<a href="#experience" class="text-left text-lg hover:underline">Experience</a>
 			<a href="#education" class="text-left text-lg hover:underline">Education</a>
 			<!-- TODO: Add theme switching button -->
-			<div class="mx-auto h-0.5 w-16 rounded-md bg-gray-300 dark:bg-gray-600"></div>
+			<div class="mx-auto h-0.5 w-16 rounded-md bg-gray-400 dark:bg-gray-600"></div>
 
-			<div class="flex justify-center gap-2 text-gray-300 max-md:hidden dark:text-gray-600">
+			<div class="flex justify-center gap-2 text-gray-400 max-md:hidden dark:text-gray-600">
 				<button
 					class="transition-all duration-75 hover:scale-110 hover:text-gray-800 dark:hover:text-white"
-					class:text-gray-500={theme === 'light'}
+					class:text-gray-600={theme === 'light'}
 					aria-label="Toggle light mode"
 					on:click={() => updateTheme('light')}
 				>
 					<span class="material-symbols-outlined text-2xl"> light_mode </span>
 				</button>
 				<button
-					class="transition-all duration-75 hover:scale-110 hover:text-gray-800 dark:hover:text-white"
-					class:text-gray-400={theme === 'system'}
+					class="transition-all duration-75 hover:scale-110 hover:text-gray-800 dark:hover:text-white {theme ===
+					'system'
+						? 'text-gray-600 dark:text-gray-400'
+						: ''}"
 					aria-label="Toggle system theme"
 					on:click={() => updateTheme('system')}
 				>
@@ -164,7 +166,7 @@
 
 	:global(html) {
 		/* cursor: url('icons8-cursor.svg'), auto; */
-		@apply scroll-smooth font-bricolage-grotesque text-gray-900 dark:bg-[#161b22] dark:text-white;
+		@apply text-blackish bg-whitish dark:bg-blackish dark:text-whitish scroll-smooth font-bricolage-grotesque;
 	}
 
 	:global(h1) {
