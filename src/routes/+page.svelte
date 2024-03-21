@@ -3,23 +3,84 @@
 	import education from '$lib/education.json';
 	import about from '$lib/about.json';
 	import Pill from '$lib/Pill.svelte';
+	import { onMount } from 'svelte';
+
 	let scroll: number;
+	let theme: string;
+
+	onMount(() => {
+		if (typeof window === 'undefined') return;
+		theme = localStorage.theme || 'system';
+		updateTheme(theme);
+	});
+
+	function updateTheme(newTheme: string) {
+		if (typeof window === 'undefined') return;
+		theme = newTheme;
+
+		switch (newTheme) {
+			case 'light':
+				document.documentElement.classList.remove('dark');
+				localStorage.theme = 'light';
+				break;
+			case 'dark':
+				document.documentElement.classList.add('dark');
+				localStorage.theme = 'dark';
+				break;
+			case 'system':
+				localStorage.removeItem('theme');
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					document.documentElement.classList.add('dark');
+				} else {
+					document.documentElement.classList.remove('dark');
+				}
+				break;
+		}
+		console.log(newTheme);
+	}
 </script>
 
 <svelte:window bind:scrollY={scroll} />
 
-<main class="container mx-auto gap-12 md:grid md:grid-cols-12">
+<main class="container gap-12 p-4 md:mx-auto md:grid md:grid-cols-12">
 	<div class="col-span-2 max-md:hidden">
 		<nav class="fixed flex h-screen flex-col justify-center gap-4 font-bricolage-grotesque">
-			<a href="#about" class="text-left text-lg">About me</a>
-			<a href="#experience" class="text-left text-lg">Experience</a>
-			<a href="#education" class="text-left text-lg">Education</a>
+			<a href="#about" class="text-left text-lg hover:underline">About me</a>
+			<a href="#experience" class="text-left text-lg hover:underline">Experience</a>
+			<a href="#education" class="text-left text-lg hover:underline">Education</a>
 			<!-- TODO: Add theme switching button -->
-			<!-- TODO: Add light/dark/system theme switching buttons -->
+			<div class="mx-auto h-0.5 w-16 rounded-md bg-gray-300 dark:bg-gray-600"></div>
+
+			<div class="flex justify-center gap-2 text-gray-300 max-md:hidden dark:text-gray-600">
+				<button
+					class="transition-all duration-75 hover:scale-110 hover:text-gray-800 dark:hover:text-white"
+					class:text-gray-500={theme === 'light'}
+					aria-label="Toggle light mode"
+					on:click={() => updateTheme('light')}
+				>
+					<span class="material-symbols-outlined text-2xl"> light_mode </span>
+				</button>
+				<button
+					class="transition-all duration-75 hover:scale-110 hover:text-gray-800 dark:hover:text-white"
+					class:text-gray-400={theme === 'system'}
+					aria-label="Toggle system theme"
+					on:click={() => updateTheme('system')}
+				>
+					<span class="material-symbols-outlined text-2xl"> computer </span>
+				</button>
+				<button
+					class="transition-all duration-75 hover:scale-110 hover:text-gray-800 dark:hover:text-white"
+					class:text-gray-400={theme === 'dark'}
+					aria-label="Toggle dark mode"
+					on:click={() => updateTheme('dark')}
+				>
+					<span class="material-symbols-outlined text-2xl"> dark_mode </span>
+				</button>
+			</div>
 		</nav>
 	</div>
 
-	<div class="relative top-48 col-span-7">
+	<div class="relative col-span-7 md:top-48">
 		<section id="about" class="mb-16 font-medium">
 			<h1 class="z-0 mb-16 !text-6xl font-semibold">
 				Hi, I'm Elias - a Software Engineer with a <i class="text-red-500">splash</i> of design.
@@ -36,7 +97,7 @@
 					<h3>{exp.employer} — <span class="italic">{exp.what}</span></h3>
 					<p class="italic">{exp.when}</p>
 					<p>{exp.description}</p>
-					<div class="mt-2 flex gap-2">
+					<div class="mt-2 flex flex-wrap gap-2">
 						{#each exp.skills as skill (skill)}
 							<Pill text={skill.text} category={skill.category}></Pill>
 						{/each}
@@ -83,8 +144,12 @@
 			alt="Portrait of me"
 		/>
 		<div class="flex flex-col">
-			<a href={`mailto:${about.email}`} class="text-blue-500 hover:underline">{about.email}</a>
-			<a href={about.github} class="text-blue-500 hover:underline">github.com/eliaskc</a>
+			<a href={`mailto:${about.email}`} class="text-blue-500 hover:underline dark:text-blue-300"
+				>{about.email}</a
+			>
+			<a href={about.github} class="text-blue-500 hover:underline dark:text-blue-300"
+				>github.com/eliaskc</a
+			>
 		</div>
 		<div class="flex flex-wrap gap-2">
 			{#each about.skills as skill (skill)}
@@ -95,15 +160,11 @@
 </main>
 
 <style lang="postcss">
-	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 	@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@500&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 	:global(html) {
 		/* cursor: url('icons8-cursor.svg'), auto; */
-		@apply scroll-smooth font-bricolage-grotesque text-gray-900;
+		@apply scroll-smooth font-bricolage-grotesque text-gray-900 dark:bg-[#161b22] dark:text-white;
 	}
 
 	:global(h1) {
