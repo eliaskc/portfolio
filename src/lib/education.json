@@ -1,9 +1,18 @@
 [
 	{
 		"title": "Chalmers",
-		"when": "2019-2024",
-		"what": "BSc and MSc in Software Engineering",
-		"description": "Broad education that has given me a base on which I feel confident to tackle any challenge. I have learnt the fundamentals of software engineering, specific tools and frameworks, how to effectively communicate as an engineer and team member, and much more.",
+		"when": {
+			"en": "August 2019 - July 2024",
+			"sv": "Augusti 2019 - Juli 2024"
+		},
+		"what": {
+			"en": "BSc and MSc in Software Engineering",
+			"sv": "Civilingenjörsexamen inom IT"
+		},
+		"description": {
+			"en": "Broad education that has given me a base on which I feel confident to tackle any challenge. I have learnt the fundamentals of software engineering, specific tools and frameworks, how to effectively communicate as an engineer and team member, and much more.",
+			"sv": "Bred utbildning som gett mig en bas på vilken jag känner mig trygg att ta mig an vilken utmaning som helst. Jag har lärt mig grunderna i mjukvaruutveckling, specifika verktyg, att effektivt kommunicera som ingenjör och team-medlem, och mycket mer."
+		},
 		"grade": "4.XX",
 		"skills": [
 			{
@@ -58,9 +67,18 @@
 	},
 	{
 		"title": "Z-order Curve-based Traffic Event Detection Using Deep Learning",
-		"when": "Spring 2024 (in progress)",
-		"what": "Master’s Thesis",
-		"description": "Explored a novel approach leveraging machine learning and space-filling curves for traffic event retrieval from large-scale, unlabelled video data. Contributed to the development of driver assistance systems (including autonomous driving) by helping companies get value from their collected traffic data. In collaboration with Volvo Cars. Collaboration with 1 other student.",
+		"when": {
+			"en": "Spring 2024 (in progress)",
+			"sv": "Våren 2024 (pågående)"
+		},
+		"what": {
+			"en": "Master’s Thesis",
+			"sv": "Mastersarbete"
+		},
+		"description": {
+			"en": "Explored a novel approach leveraging machine learning and space-filling curves for traffic event retrieval from large-scale, unlabelled video data. The theses aimed to aid the development of driver assistance systems (including autonomous driving) by helping companies get value from their collected traffic data. In collaboration with Volvo Cars. Collaboration with one other student.",
+			"sv": "Utforskade en ny metod som utnyttjar maskininlärning och 'space-filling curves' för att hitta trafikhändelser från storskaliga, icke-annoterad videodata. Arbetet syftade till att bidra till utvecklingen av förarsystem (inklusive autonoma system) genom att hjälpa företag att få värde från sin insamlade trafikdata. I samarbete med Volvo Personvagnar AB. Gjort med en annan student."
+		},
 		"skills": [
 			{
 				"text": "Python",
@@ -78,10 +96,19 @@
 	},
 	{
 		"title": "weave",
-		"when": "Fall 2023",
-		"what": "Game Development Project",
+		"when": {
+			"en": "Fall 2023",
+			"sv": "Hösten 2023"
+		},
+		"what": {
+			"en": "Game Development Project",
+			"sv": "Spelutvecklingsprojekt"
+		},
 		"link": "https://www.idxpo.se/current/group_02/build/index.html",
-		"description": "Ideated and developed a collaborative game for a game development project course. Players control a line and have to stay alive as long as possible by avoiding each other and obstacles. I contributed to several areas of the development but my main focus was on the UI and interaction design. Collaboration with 5 other students.",
+		"description": {
+			"en": "Ideated and developed a collaborative game for a game development project course. Players control a line and have to stay alive as long as possible by avoiding each other and obstacles. I contributed to several areas of the development but my main focus was on the UI and interaction design. Collaboration with 5 other students.",
+			"sv": "Utvecklade ett spel fokuserat kring samarbete för en kurs i spelutveckling. Spelare styr linjer och måste överleva så länge som möjligt genom att undvika varandra och hinder. Jag bidrog till flera områden av utvecklingen, men mitt huvudsakliga fokus var på UI och interaktionsdesign. Gjort med 5 andra studenter."
+		},
 		"skills": [
 			{
 				"text": "Godot",
@@ -99,9 +126,18 @@
 	},
 	{
 		"title": "Hospital Visualization and Prediction",
-		"when": "Spring 2022",
-		"what": "Bachelor’s Thesis",
-		"description": "Created a tool for hospitial visualization and overview. My focus was a neural network developed to predict patient flow based on historical data. On behalf of Norra Älvsborgs Länssjukhus. Collaboration with 5 other students.",
+		"when": {
+			"en": "Spring 2022",
+			"sv": "Våren 2022"
+		},
+		"what": {
+			"en": "Bachelor’s Thesis",
+			"sv": "Kandidatarbete"
+		},
+		"description": {
+			"en": "Created a tool for hospitial visualization and overview. My focus was a neural network developed to predict patient flow based on historical data. On behalf of Norra Älvsborgs Länssjukhus. Collaboration with 5 other students.",
+			"sv": "Skapade ett verktyg för visualisering och översikt av sjukhus. Min fokus var ett neuralt nätverk utvecklat för att förutsäga patientflöde baserat på historisk data. På uppdrag av Norra Älvsborgs Länssjukhus. Gjort med 5 andra studenter."
+		},
 		"skills": [
 			{
 				"text": "Python",

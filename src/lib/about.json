@@ -1,13 +1,22 @@
 {
 	"name": "Elias Kjellberg Carlson",
-	"location": "Gothenburg, Sweden",
+	"location": {
+		"en": "Gothenburg, Sweden",
+		"sv": "Göteborg, Sverige"
+	},
 	"email": "eliaskjellbergcarlson@gmail.com",
 	"github": "https://github.com/eliaskc",
 	"languages": ["Swedish", "English", "French (basic)"],
-	"text": [
-		"I want to build products that excite me and that make a difference, whether it be world-altering or helping someone's everyday life be slightly more enjoyable.",
-		"I love learning new things and believe my biggest strength is the speed at which I’m able to do so. My MSc at Chalmers has given me a foundation from which I'm eager to leap forward and continue learning."
-	],
+	"text": {
+		"en": [
+			"I want to build products that excite me and that make a difference, whether it be world-altering or helping someone's everyday life be slightly more enjoyable.",
+			"I love learning new things and believe my biggest strength is the speed at which I’m able to do so. My MSc at Chalmers has given me a foundation from which I'm eager to leap forward and continue learning."
+		],
+		"sv": [
+			"Jag vill bygga produkter som inspirerar mig och som gör en skillnad, vare sig det är världsförändrande eller hjälper någons vardag att bli lite bättre.",
+			"Jag älskar att lära mig nya saker och tror att min största styrka är hur snabbt jag kan göra det med. Min utbildning på Chalmers har gett mig en grund att utgå från och jag är taggad på att dra det till nytta."
+		]
+	},
 	"skills": [
 		{
 			"text": "React",
