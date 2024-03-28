@@ -5,9 +5,10 @@
 	import Pill from '$lib/Pill.svelte';
 	import { onMount } from 'svelte';
 
-	let scroll: number;
+	let scrollY: number;
 	let theme: string;
-	let preferredLanguage: 'en' | 'sv' = 'sv'; // Default to 'en'
+	let preferredLanguage: 'en' | 'sv' = 'en';
+	let windowSize: number;
 
 	$: if (typeof navigator !== 'undefined') {
 		preferredLanguage = navigator.language.startsWith('sv') ? 'sv' : 'en';
@@ -48,10 +49,10 @@
 	}
 </script>
 
-<svelte:window bind:scrollY={scroll} />
+<svelte:window bind:scrollY bind:innerWidth={windowSize} />
 
-<main class="container gap-12 p-4 md:mx-auto md:grid md:grid-cols-12">
-	<div class="col-span-2 max-md:hidden">
+<main class="container grid grid-cols-1 gap-12 p-4 md:mx-auto md:grid-cols-12 md:grid-rows-1">
+	<div class="max-md:hidden md:col-span-2">
 		<nav
 			class="fixed flex h-screen flex-col items-center justify-center gap-4 font-bricolage-grotesque"
 		>
@@ -66,9 +67,7 @@
 			>
 			<!-- TODO: Add theme switching button -->
 
-			<!-- <div class="mx-auto h-0.5 w-16 rounded-md bg-gray-300 dark:bg-gray-700"></div> -->
-
-			<div class="justify-centertext-gray-400 flex gap-2 max-md:hidden dark:text-gray-600">
+			<div class="flex justify-center gap-2 text-gray-400 max-md:hidden dark:text-gray-600">
 				<button
 					class="transition-all duration-75 hover:scale-110 hover:text-gray-800 dark:hover:text-white"
 					class:text-gray-600={theme === 'light'}
@@ -114,7 +113,7 @@
 		</nav>
 	</div>
 
-	<div class="relative col-span-7 md:top-48">
+	<div class="relative max-md:row-span-1 max-md:row-start-2 md:top-48 md:col-span-7">
 		<section id="about" class="mb-16 font-medium">
 			<h1 class="z-0 mb-16 !text-6xl font-semibold">
 				{#if preferredLanguage === 'en'}
@@ -175,8 +174,8 @@
 	</div>
 
 	<aside
-		style:transform={`translate3d(0, ${scroll * 0.7}px, 0)`}
-		class="relative top-32 col-span-3 flex flex-col gap-4"
+		style:transform={windowSize >= 768 ? `translateY(${scrollY * 0.7}px)` : ''}
+		class="relative flex flex-col gap-4 max-md:row-span-1 md:top-32 md:col-span-3"
 	>
 		<img
 			class="mb-4 aspect-square w-full border-4 border-blackish object-cover dark:border-whitish"
@@ -193,7 +192,9 @@
 				>github.com/eliaskc</a
 			>
 		</div>
-		<div class="flex flex-wrap gap-2">
+		<div
+			class="scrollbar-hide flex gap-2 overflow-x-scroll text-nowrap max-md:-mx-4 max-md:pl-4 md:flex-wrap"
+		>
 			{#each about.skills as skill (skill)}
 				<Pill text={skill.text} category={skill.category}></Pill>
 			{/each}
@@ -223,5 +224,11 @@
 
 	:global(h4) {
 		@apply text-xl;
+	}
+
+	@media (min-width: 768px) {
+		#image {
+			transform: translateY(calc(var(--scroll) * 0.7px));
+		}
 	}
 </style>
