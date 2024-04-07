@@ -7,11 +7,11 @@
 
 	let scrollY: number;
 	let theme: string;
-	let preferredLanguage: 'en' | 'sv' = 'sv';
+	let preferredLanguage: 'en' | 'sv' = 'en';
 	let windowSize: number;
 
 	$: if (typeof navigator !== 'undefined') {
-		// preferredLanguage = navigator.language.startsWith('sv') ? 'sv' : 'en';
+		preferredLanguage = navigator.language.startsWith('sv') ? 'sv' : 'en';
 	}
 
 	onMount(() => {
