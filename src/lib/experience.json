@@ -6,17 +6,17 @@
 		},
 		"employer": "Birkabo",
 		"what": {
-			"en": "Web Development Project",
-			"sv": "Webbutvecklingsprojekt"
+			"en": "Freelance Web Development Project",
+			"sv": "Frilansprojekt"
 		},
 		"link": "https://www.birkabo.se/",
 		"description": {
-			"en": "A web application for the property management company Birkabo. The website provides information for current and potential tenants.",
-			"sv": "En webbapplikation för fastighetsförvaltningsföretaget Birkabo. Webbplatsen ger information för nuvarande och potentiella hyresgäster."
+			"en": "Developed a website for the property management company Birkabo, designed to serve both current and potential tenants. The site contains information about the properties, the application process, and contact details.",
+			"sv": "Utvecklade en hemsida för fastighetsförvaltningsföretaget Birkabo, gjord för både nuvarande och potentiella hyresgäster. Webbplatsen innehåller information om fastigheterna, ansökningsprocessen, blanketter och kontaktuppgifter."
 		},
 		"skills": [
 			{
-				"text": "NextJS",
+				"text": "Next.js",
 				"category": "web"
 			},
 			{
@@ -25,7 +25,7 @@
 			},
 			{
 				"text": "Tailwind CSS",
-				"category": "styling"
+				"category": "web"
 			},
 			{
 				"text": "Figma",
@@ -41,24 +41,24 @@
 		"employer": "Ongoing WMS",
 		"what": {
 			"en": "Software Developer",
-			"sv": "Mjukvaruutvecklare"
+			"sv": "Utvecklare"
 		},
 		"description": {
-			"en": "Designed and developed a dashboard for warehouse owner overview together with another summer intern.",
-			"sv": "Designade och utvecklade en översikt för lagerägare tillsammans med en annan sommarpraktikant."
+			"en": "Designed and developed a dashboard for warehouse owner overview. Done together with another summer intern.",
+			"sv": "Designade och utvecklade en sida gjord för att ge översikt till lagerägare. Gjort med en annan sommarpraktikant."
 		},
 		"skills": [
 			{
 				"text": "ASP.NET Web Forms",
-				"category": "backend"
-			},
-			{
-				"text": "Javascript",
 				"category": "web"
 			},
 			{
-				"text": "CSS",
-				"category": "styling"
+				"text": "HTML/JS/CSS",
+				"category": "web"
+			},
+			{
+				"text": ".NET",
+				"category": "programming"
 			},
 			{
 				"text": "Figma",
@@ -74,7 +74,7 @@
 		"employer": "Centiro Solutions AB",
 		"what": {
 			"en": "Software Developer",
-			"sv": "Mjukvaruutvecklare"
+			"sv": "Utvecklare"
 		},
 		"description": {
 			"en": "Fullstack development in a research and development team. Built an internal angular package for feature toggling. Enhanced an existing internal web application for lifecycle management.",
@@ -86,20 +86,24 @@
 				"category": "web"
 			},
 			{
+				"text": "Bootstrap",
+				"category": "web"
+			},
+			{
 				"text": "C#",
-				"category": "backend"
+				"category": "programming"
+			},
+			{
+				"text": ".NET",
+				"category": "programming"
 			},
 			{
 				"text": "SQL",
-				"category": "database"
+				"category": "programming"
 			},
 			{
 				"text": "Azure DevOps",
 				"category": "tools"
-			},
-			{
-				"text": "ASP.NET",
-				"category": "backend"
 			}
 		]
 	}

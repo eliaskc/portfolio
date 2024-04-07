@@ -7,11 +7,11 @@
 
 	let scrollY: number;
 	let theme: string;
-	let preferredLanguage: 'en' | 'sv' = 'en';
+	let preferredLanguage: 'en' | 'sv' = 'sv';
 	let windowSize: number;
 
 	$: if (typeof navigator !== 'undefined') {
-		preferredLanguage = navigator.language.startsWith('sv') ? 'sv' : 'en';
+		// preferredLanguage = navigator.language.startsWith('sv') ? 'sv' : 'en';
 	}
 
 	onMount(() => {
@@ -115,11 +115,15 @@
 
 	<div class="relative max-md:row-span-1 max-md:row-start-2 md:top-48 md:col-span-7">
 		<section id="about" class="mb-16 font-medium">
-			<h1 class="z-0 mb-16 !text-6xl font-semibold">
+			<h1 class="z-0 mb-16 hyphens-auto !text-6xl font-semibold">
 				{#if preferredLanguage === 'en'}
-					Hi, I'm Elias — a Software Engineer with a <i class="text-red-500">splash</i> of design.
+					Hi, I'm Elias — a Software Engineer with a <i class="text-green-800 dark:text-green-300"
+						>hint</i
+					> of design.
 				{:else}
-					Hej, jag är Elias — en mjukvaruingenjör med en <i class="text-red-500">droppe</i> design.
+					Hej, jag är Elias — en utvecklare med en <i class="text-green-800 dark:text-green-300"
+						>nypa</i
+					> design.
 				{/if}
 			</h1>
 			{#each about.text[preferredLanguage] as paragraph (paragraph)}
@@ -131,7 +135,16 @@
 			<h1 class="mb-4">{preferredLanguage === 'en' ? 'Experience' : 'Erfarenhet'}</h1>
 			{#each experience as exp (exp)}
 				<div class="mb-8">
-					<h3>{exp.employer} — <span class="italic">{exp.what[preferredLanguage]}</span></h3>
+					<h3>
+						{#if exp.link}
+							<a href={exp.link} class="text-blue-500 hover:underline dark:text-blue-300"
+								>{exp.employer}</a
+							>
+						{:else}
+							{exp.employer}
+						{/if}
+						— <span class="italic">{exp.what[preferredLanguage]}</span>
+					</h3>
 					<p class="italic">{exp.when[preferredLanguage]}</p>
 					<p>{exp.description[preferredLanguage]}</p>
 					<div class="mt-2 flex flex-wrap gap-2">
@@ -148,7 +161,14 @@
 			{#each education as edu (edu)}
 				<div class="mb-8 flex flex-col gap-2">
 					<h3>
-						{edu.title} — <span class="italic">{edu.what[preferredLanguage]}</span>
+						{#if edu.link}
+							<a href={edu.link} class="text-blue-500 hover:underline dark:text-blue-300">
+								{edu.title[preferredLanguage]}
+							</a>
+						{:else}
+							{edu.title[preferredLanguage]} —
+							<span class="italic">{edu.what[preferredLanguage]}</span>
+						{/if}
 					</h3>
 					<p class="italic">{edu.when[preferredLanguage]}</p>
 					<p>{edu.description[preferredLanguage]}</p>
@@ -159,6 +179,14 @@
 						{:else}
 							<p>Betygsnitt: {edu.grade}/5.0</p>
 						{/if}
+					{/if}
+
+					{#if edu.courses && edu.courses.length > 0}
+						<div class="flex flex-wrap gap-2">
+							{#each edu.courses as courses (courses)}
+								<Pill text={courses['en']} category="course"></Pill>
+							{/each}
+						</div>
 					{/if}
 
 					{#if edu.skills && edu.skills.length > 0}
@@ -193,7 +221,7 @@
 			>
 		</div>
 		<div
-			class="scrollbar-hide flex gap-2 overflow-x-scroll text-nowrap max-md:-mx-4 max-md:pl-4 md:flex-wrap"
+			class="flex gap-2 overflow-x-scroll text-nowrap scrollbar-hide max-md:-mx-4 max-md:pl-4 md:flex-wrap"
 		>
 			{#each about.skills as skill (skill)}
 				<Pill text={skill.text} category={skill.category}></Pill>

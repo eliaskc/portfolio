@@ -1,83 +1,89 @@
 [
 	{
-		"title": "Chalmers",
+		"title": {
+			"en": "Chalmers",
+			"sv": "Chalmers"
+		},
 		"when": {
-			"en": "August 2019 - July 2024",
-			"sv": "Augusti 2019 - Juli 2024"
+			"en": "August 2019 - Juni 2024",
+			"sv": "Augusti 2019 - Juni 2024"
 		},
 		"what": {
 			"en": "BSc and MSc in Software Engineering",
 			"sv": "Civilingenjörsexamen inom IT"
 		},
 		"description": {
-			"en": "Broad education that has given me a base on which I feel confident to tackle any challenge. I have learnt the fundamentals of software engineering, specific tools and frameworks, how to effectively communicate as an engineer and team member, and much more.",
-			"sv": "Bred utbildning som gett mig en bas på vilken jag känner mig trygg att ta mig an vilken utmaning som helst. Jag har lärt mig grunderna i mjukvaruutveckling, specifika verktyg, att effektivt kommunicera som ingenjör och team-medlem, och mycket mer."
+			"en": "A comprehensive education that has provided me with a foundation from which I feel confident to tackle any challenge. I have learned everything from basic principles of software development and mathematics to designing interfaces and building web applications. Beyond technical knowledge, I have also acquired the skills to communicate effectively as an engineer, lead and work in teams, understand the psychology that affects developers, and much more.",
+			"sv": "Bred utbildning som gett mig en bas från vilken jag känner mig trygg att ta mig an vilken utmaning som helst. Jag har lärt mig allt från grundläggande principer inom mjukvaruutveckling och matematik, till att utforma gränssnitt och bygga webbapplikationer. Utöver de tekniska kunskaperna har jag även lärt mig att effektivt kommunicera som ingenjör, leda och arbeta i team, psykologi som påverkar utvecklare, och mycket mer."
 		},
-		"grade": "4.XX",
-		"skills": [
+		"grade": "4.68",
+		"courses": [
 			{
-				"text": "Object-oriented programming",
-				"category": "course"
+				"en": "Object-Oriented Programming",
+				"sv": "Objektorienterad programmering"
 			},
 			{
-				"text": "Web applications",
-				"category": "course"
+				"en": "Web Applications",
+				"sv": "Webbapplikationer"
 			},
 			{
-				"text": "UI/UX-design",
-				"category": "course"
+				"en": "UI/UX Design",
+				"sv": "UI/UX-design"
 			},
 			{
-				"text": "Introduction to data science and AI",
-				"category": "course"
+				"en": "Introduction to Data Science and AI",
+				"sv": "Introduktion till datavetenskap och AI"
 			},
 			{
-				"text": "Data structures and algorithms",
-				"category": "course"
+				"en": "Data Structures and Algorithms",
+				"sv": "Datastrukturer och algoritmer"
 			},
 			{
-				"text": "Computer graphics",
-				"category": "course"
+				"en": "Computer Graphics",
+				"sv": "Datorgrafik"
 			},
 			{
-				"text": "Empirical software engineering",
-				"category": "course"
+				"en": "Empirical Software Engineering",
+				"sv": "Empirisk mjukvaruutveckling"
 			},
 			{
-				"text": "Architectures for scale-out systems",
-				"category": "course"
+				"en": "Architectures for Scale-Out Systems",
+				"sv": "Arkitekturer för skalbara system"
 			},
 			{
-				"text": "Behavioural software engineering",
-				"category": "course"
+				"en": "Behavioural Software Engineering",
+				"sv": "Beteendemässig mjukvaruutveckling"
 			},
 			{
-				"text": "Project management",
-				"category": "course"
+				"en": "Project Management",
+				"sv": "Projektledning"
 			},
 			{
-				"text": "Software engineering for AI/ML-enabled systems",
-				"category": "course"
+				"en": "Software Engineering for AI/ML-Enabled Systems",
+				"sv": "Mjukvaruutveckling för AI/ML-aktiverade system"
 			},
 			{
-				"text": "Quality assurance and testing",
-				"category": "course"
+				"en": "Quality Assurance and Testing",
+				"sv": "Kvalitetssäkring och testning"
 			}
 		]
 	},
 	{
-		"title": "Z-order Curve-based Traffic Event Detection Using Deep Learning",
+		"title": {
+			"en": "Z-order Curve-based Traffic Event Detection Using Deep Learning",
+			"sv": "Z-order Curve-based Traffic Event Detection Using Deep Learning"
+		},
 		"when": {
 			"en": "Spring 2024 (in progress)",
 			"sv": "Våren 2024 (pågående)"
 		},
 		"what": {
 			"en": "Master’s Thesis",
-			"sv": "Mastersarbete"
+			"sv": "Examensarbete"
 		},
 		"description": {
-			"en": "Explored a novel approach leveraging machine learning and space-filling curves for traffic event retrieval from large-scale, unlabelled video data. The theses aimed to aid the development of driver assistance systems (including autonomous driving) by helping companies get value from their collected traffic data. In collaboration with Volvo Cars. Collaboration with one other student.",
-			"sv": "Utforskade en ny metod som utnyttjar maskininlärning och 'space-filling curves' för att hitta trafikhändelser från storskaliga, icke-annoterad videodata. Arbetet syftade till att bidra till utvecklingen av förarsystem (inklusive autonoma system) genom att hjälpa företag att få värde från sin insamlade trafikdata. I samarbete med Volvo Personvagnar AB. Gjort med en annan student."
+			"en": "Explored a novel approach leveraging machine learning and space-filling curves for computationally efficient traffic event retrieval in large-scale, unlabelled video datasets. The thesis contributed to the research of driver assistance systems (including autonomous driving) by providing a proof of concept for how companies can get value from their collected automotive data. In collaboration with Volvo Cars. Conducted with one other student.",
+			"sv": "Utforskade en ny metod som använder maskininlärning och 'space-filling curves' för att hitta trafikhändelser från storskaliga databaser med icke-annoterad videodata. Arbetet bidrog till forskningi för utvecklingen av förarsystem (såsom autopilor) genom att hjälpa företag få värde från sin insamlade trafikdata. I samarbete med Volvo Personvagnar AB. Gjort med en annan student."
 		},
 		"skills": [
 			{
@@ -89,13 +95,16 @@
 				"category": "programming"
 			},
 			{
-				"text": "ML Video Event Detection",
+				"text": "ML Saliency Prediction",
 				"category": "AI"
 			}
 		]
 	},
 	{
-		"title": "weave",
+		"title": {
+			"en": "weave",
+			"sv": "weave"
+		},
 		"when": {
 			"en": "Fall 2023",
 			"sv": "Hösten 2023"
@@ -112,7 +121,7 @@
 		"skills": [
 			{
 				"text": "Godot",
-				"category": "game"
+				"category": "programming"
 			},
 			{
 				"text": "C#",
@@ -125,7 +134,10 @@
 		]
 	},
 	{
-		"title": "Hospital Visualization and Prediction",
+		"title": {
+			"en": "Hospital Visualization and Prediction",
+			"sv": "Den Intelligenta Akutmottagningen"
+		},
 		"when": {
 			"en": "Spring 2022",
 			"sv": "Våren 2022"
@@ -135,13 +147,21 @@
 			"sv": "Kandidatarbete"
 		},
 		"description": {
-			"en": "Created a tool for hospitial visualization and overview. My focus was a neural network developed to predict patient flow based on historical data. On behalf of Norra Älvsborgs Länssjukhus. Collaboration with 5 other students.",
-			"sv": "Skapade ett verktyg för visualisering och översikt av sjukhus. Min fokus var ett neuralt nätverk utvecklat för att förutsäga patientflöde baserat på historisk data. På uppdrag av Norra Älvsborgs Länssjukhus. Gjort med 5 andra studenter."
+			"en": "Created a tool for hospitial visualization and overview. My main focus was the development of a neural network designed to predict patient flow based on historical data. On behalf of Norra Älvsborgs Länssjukhus. Collaboration with 5 other students.",
+			"sv": "Skapade ett verktyg för visualisering och översikt av sjukhus. Min huvudfokus var skapandet av ett neuralt nätverk för att förutsäga patientflöde baserat på historisk data. På uppdrag av Norra Älvsborgs Länssjukhus. Gjort med 5 andra studenter."
 		},
 		"skills": [
 			{
 				"text": "Python",
 				"category": "programming"
+			},
+			{
+				"text": "AI/ML",
+				"category": "AI"
+			},
+			{
+				"text": "Neural Networks",
+				"category": "AI"
 			},
 			{
 				"text": "TensorFlow",

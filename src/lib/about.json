@@ -9,23 +9,15 @@
 	"languages": ["Swedish", "English", "French (basic)"],
 	"text": {
 		"en": [
-			"I want to build products that excite me and that make a difference, whether it be world-altering or helping someone's everyday life be slightly more enjoyable.",
-			"I love learning new things and believe my biggest strength is the speed at which I’m able to do so. My MSc at Chalmers has given me a foundation from which I'm eager to leap forward and continue learning."
+			"I want to build products that excite me and make a difference, whether that be by changing the world or making someone's everyday life slightly better.",
+			"I love learning new things and my biggest strength is the speed at which I’m able to do so. My MSc at Chalmers has given me a broad and solid foundation which I'm eager to build upon and continue learning."
 		],
 		"sv": [
-			"Jag vill bygga produkter som inspirerar mig och som gör en skillnad, vare sig det är världsförändrande eller hjälper någons vardag att bli lite bättre.",
-			"Jag älskar att lära mig nya saker och tror att min största styrka är hur snabbt jag kan göra det med. Min utbildning på Chalmers har gett mig en grund att utgå från och jag är taggad på att dra det till nytta."
+			"Jag vill skapa produkter att vara stolt över och som gör skillnad, vare sig det gäller att rädda världen eller att göra någons vardag lite bättre.",
+			"Jag älskar att lära mig och min största styrka är hur snabbt jag gör just det. Min civilingenjörsutbildning inom IT på Chalmers har gett mig en stabil grund att utgå från och jag är ivrig att dra nytta av den och fortsätta lära mig."
 		]
 	},
 	"skills": [
-		{
-			"text": "React",
-			"category": "web"
-		},
-		{
-			"text": "Node.js",
-			"category": "backend"
-		},
 		{
 			"text": "Python",
 			"category": "programming"
@@ -39,19 +31,27 @@
 			"category": "programming"
 		},
 		{
-			"text": "SQL",
-			"category": "database"
+			"text": "C++",
+			"category": "programming"
 		},
 		{
-			"text": "HTML",
+			"text": "Haskell",
+			"category": "programming"
+		},
+		{
+			"text": "SQL",
+			"category": "programming"
+		},
+		{
+			"text": "React",
 			"category": "web"
 		},
 		{
-			"text": "CSS",
-			"category": "styling"
+			"text": "Next.js",
+			"category": "web"
 		},
 		{
-			"text": "JavaScript",
+			"text": "Angular",
 			"category": "web"
 		},
 		{
@@ -59,20 +59,8 @@
 			"category": "web"
 		},
 		{
-			"text": "C++",
-			"category": "programming"
-		},
-		{
-			"text": "C",
-			"category": "programming"
-		},
-		{
-			"text": "Bootstrap",
-			"category": "styling"
-		},
-		{
 			"text": "Tailwind CSS",
-			"category": "styling"
+			"category": "web"
 		},
 		{
 			"text": "Git",
@@ -84,6 +72,14 @@
 		},
 		{
 			"text": "Kubernetes",
+			"category": "tools"
+		},
+		{
+			"text": "Sonarqube",
+			"category": "tools"
+		},
+		{
+			"text": "CI/CD",
 			"category": "tools"
 		},
 		{
