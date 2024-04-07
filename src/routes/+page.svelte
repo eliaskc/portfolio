@@ -166,9 +166,9 @@
 								{edu.title[preferredLanguage]}
 							</a>
 						{:else}
-							{edu.title[preferredLanguage]} —
-							<span class="italic">{edu.what[preferredLanguage]}</span>
+							{edu.title[preferredLanguage]}
 						{/if}
+						— <span class="italic">{edu.what[preferredLanguage]}</span>
 					</h3>
 					<p class="italic">{edu.when[preferredLanguage]}</p>
 					<p>{edu.description[preferredLanguage]}</p>
