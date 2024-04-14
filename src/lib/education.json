@@ -17,56 +17,7 @@
 			"sv": "Bred utbildning som gett mig en bas från vilken jag känner mig trygg att ta mig an vilken utmaning som helst. Jag har lärt mig allt från grundläggande principer inom mjukvaruutveckling och matematik, till att utforma gränssnitt och bygga webbapplikationer. Utöver de tekniska kunskaperna har jag även lärt mig att effektivt kommunicera som ingenjör, leda och arbeta i team, psykologi som påverkar utvecklare, och mycket mer."
 		},
 		"grade": "4.68",
-		"courses": [
-			{
-				"en": "Object-Oriented Programming",
-				"sv": "Objektorienterad programmering"
-			},
-			{
-				"en": "Web Applications",
-				"sv": "Webbapplikationer"
-			},
-			{
-				"en": "UI/UX Design",
-				"sv": "UI/UX-design"
-			},
-			{
-				"en": "Introduction to Data Science and AI",
-				"sv": "Introduktion till datavetenskap och AI"
-			},
-			{
-				"en": "Data Structures and Algorithms",
-				"sv": "Datastrukturer och algoritmer"
-			},
-			{
-				"en": "Computer Graphics",
-				"sv": "Datorgrafik"
-			},
-			{
-				"en": "Empirical Software Engineering",
-				"sv": "Empirisk mjukvaruutveckling"
-			},
-			{
-				"en": "Architectures for Scale-Out Systems",
-				"sv": "Arkitekturer för skalbara system"
-			},
-			{
-				"en": "Behavioural Software Engineering",
-				"sv": "Beteendemässig mjukvaruutveckling"
-			},
-			{
-				"en": "Project Management",
-				"sv": "Projektledning"
-			},
-			{
-				"en": "Software Engineering for AI/ML-Enabled Systems",
-				"sv": "Mjukvaruutveckling för AI/ML-aktiverade system"
-			},
-			{
-				"en": "Quality Assurance and Testing",
-				"sv": "Kvalitetssäkring och testning"
-			}
-		]
+		"courses": []
 	},
 	{
 		"title": {
@@ -82,8 +33,8 @@
 			"sv": "Examensarbete"
 		},
 		"description": {
-			"en": "Explored a novel approach leveraging machine learning and space-filling curves for computationally efficient traffic event retrieval in large-scale, unlabelled video datasets. The thesis contributed to the research of driver assistance systems (including autonomous driving) by providing a proof of concept for how companies can get value from their collected automotive data. In collaboration with Volvo Cars. Conducted with one other student.",
-			"sv": "Utforskade en ny metod som använder maskininlärning och 'space-filling curves' för att hitta trafikhändelser från storskaliga databaser med icke-annoterad videodata. Arbetet bidrog till forskningi för utvecklingen av förarsystem (såsom autopilor) genom att hjälpa företag få värde från sin insamlade trafikdata. I samarbete med Volvo Personvagnar AB. Gjort med en annan student."
+			"en": "Explored a novel approach leveraging machine learning and space-filling curves for computationally efficient traffic event retrieval in large-scale, unlabelled video datasets. The thesis contributed to the research of driver assistance systems by providing a proof of concept for how companies can get value from their collected automotive data. In collaboration with Volvo Cars. Conducted with one other student.",
+			"sv": "Utforskade en ny metod som använder maskininlärning och 'space-filling curves' för att hitta trafikhändelser från storskaliga databaser med icke-annoterad videodata. Arbetet bidrog till forskning för utvecklingen av förarsystem genom att hjälpa företag få värde från sin insamlade trafikdata. I samarbete med Volvo Personvagnar AB. Gjort med en annan student."
 		},
 		"skills": [
 			{

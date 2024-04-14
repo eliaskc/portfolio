@@ -47,12 +47,46 @@
 	function updateLanguage(language: string) {
 		preferredLanguage = language as 'en' | 'sv';
 	}
+
+	function autoScroll(node: HTMLElement) {
+		let accumulatedScroll = 0;
+		let speed = 0.5;
+		let direction = 1;
+		let maxWidth = 1024;
+
+		if (window.innerWidth > maxWidth) {
+			return;
+		}
+
+		function scroll() {
+			if (node.scrollLeft >= node.scrollWidth - node.clientWidth && direction === 1) {
+				direction = -1;
+			} else if (node.scrollLeft <= 0 && direction === -1) {
+				direction = 1;
+			}
+
+			accumulatedScroll += speed * direction;
+
+			if (Math.abs(accumulatedScroll) >= 1) {
+				node.scrollLeft += Math.floor(accumulatedScroll);
+				accumulatedScroll %= 1;
+			}
+
+			window.requestAnimationFrame(scroll);
+		}
+
+		scroll();
+
+		return {
+			destroy() {}
+		};
+	}
 </script>
 
 <svelte:window bind:scrollY bind:innerWidth={windowSize} />
 
-<main class="container grid grid-cols-1 gap-12 p-4 md:mx-auto md:grid-cols-12 md:grid-rows-1">
-	<div class="max-md:hidden md:col-span-2">
+<main class="container mx-auto grid grid-cols-1 gap-12 p-8 lg:grid-cols-12">
+	<div class="max-lg:hidden lg:col-span-2">
 		<nav
 			class="fixed flex h-screen flex-col items-center justify-center gap-4 font-bricolage-grotesque"
 		>
@@ -65,9 +99,8 @@
 			<a href="#education" class="text-left text-lg hover:underline"
 				>{preferredLanguage === 'en' ? 'Education' : 'Utbildning'}</a
 			>
-			<!-- TODO: Add theme switching button -->
 
-			<div class="flex justify-center gap-2 text-gray-400 max-md:hidden dark:text-gray-600">
+			<div class="flex justify-center gap-2 text-gray-400 max-lg:hidden dark:text-gray-600">
 				<button
 					class="transition-all duration-75 hover:scale-110 hover:text-gray-800 dark:hover:text-white"
 					class:text-gray-600={theme === 'light'}
@@ -94,7 +127,7 @@
 				</button>
 			</div>
 
-			<div class="flex justify-center gap-2 text-gray-400 max-md:hidden dark:text-gray-600">
+			<div class="flex justify-center gap-2 text-gray-400 max-lg:hidden dark:text-gray-600">
 				<button
 					class="transition-all duration-75 hover:scale-110 hover:text-gray-800 dark:hover:text-white
 					{preferredLanguage === 'en' ? 'text-gray-600 dark:text-gray-400' : ''}"
@@ -113,17 +146,19 @@
 		</nav>
 	</div>
 
-	<div class="relative max-md:row-span-1 max-md:row-start-2 md:top-48 md:col-span-7">
-		<section id="about" class="mb-16 font-medium">
-			<h1 class="z-0 mb-16 hyphens-auto !text-6xl font-semibold">
+	<div
+		class="relative flex flex-col gap-y-8 max-lg:row-span-1 max-lg:row-start-2 lg:top-48 lg:col-span-7"
+	>
+		<section id="about" class="font-medium">
+			<h1 class="z-0 mb-16 text-wrap !text-6xl font-semibold">
 				{#if preferredLanguage === 'en'}
 					Hi, I'm Elias — a Software Engineer with a <i class="text-green-800 dark:text-green-300"
 						>hint</i
-					> of design.
+					> of design
 				{:else}
 					Hej, jag är Elias — en utvecklare med en <i class="text-green-800 dark:text-green-300"
 						>nypa</i
-					> design.
+					> design
 				{/if}
 			</h1>
 			{#each about.text[preferredLanguage] as paragraph (paragraph)}
@@ -131,11 +166,11 @@
 			{/each}
 		</section>
 
-		<section id="experience" class="mb-16">
-			<h1 class="mb-4">{preferredLanguage === 'en' ? 'Experience' : 'Erfarenhet'}</h1>
+		<section id="experience">
+			<h1 class="mb-4 font-bold">{preferredLanguage === 'en' ? 'Experience' : 'Erfarenhet'}</h1>
 			{#each experience as exp (exp)}
 				<div class="mb-8">
-					<h3>
+					<h3 class="font-semibold">
 						{#if exp.link}
 							<a href={exp.link} class="text-blue-500 hover:underline dark:text-blue-300"
 								>{exp.employer}</a
@@ -143,7 +178,7 @@
 						{:else}
 							{exp.employer}
 						{/if}
-						— <span class="italic">{exp.what[preferredLanguage]}</span>
+						— <span class="font-normal italic">{exp.what[preferredLanguage]}</span>
 					</h3>
 					<p class="italic">{exp.when[preferredLanguage]}</p>
 					<p>{exp.description[preferredLanguage]}</p>
@@ -156,11 +191,11 @@
 			{/each}
 		</section>
 
-		<section id="education" class="h-96">
-			<h1 class="mb-4">{preferredLanguage === 'en' ? 'Education' : 'Utbildning'}</h1>
+		<section id="education">
+			<h1 class="mb-4 font-bold">{preferredLanguage === 'en' ? 'Education' : 'Utbildning'}</h1>
 			{#each education as edu (edu)}
 				<div class="mb-8 flex flex-col gap-2">
-					<h3>
+					<h3 class="font-semibold">
 						{#if edu.link}
 							<a href={edu.link} class="text-blue-500 hover:underline dark:text-blue-300">
 								{edu.title[preferredLanguage]}
@@ -168,16 +203,16 @@
 						{:else}
 							{edu.title[preferredLanguage]}
 						{/if}
-						— <span class="italic">{edu.what[preferredLanguage]}</span>
+						— <span class="font-normal italic">{edu.what[preferredLanguage]}</span>
 					</h3>
 					<p class="italic">{edu.when[preferredLanguage]}</p>
 					<p>{edu.description[preferredLanguage]}</p>
 
 					{#if edu.grade}
 						{#if preferredLanguage === 'en'}
-							<p>Grade average: {edu.grade}/5.0</p>
+							<p>Grade average: {edu.grade}</p>
 						{:else}
-							<p>Betygsnitt: {edu.grade}/5.0</p>
+							<p>Betygsnitt: {edu.grade}</p>
 						{/if}
 					{/if}
 
@@ -201,18 +236,18 @@
 		</section>
 	</div>
 
-	<aside
-		style:transform={windowSize >= 768 ? `translateY(${scrollY * 0.7}px)` : ''}
-		class="relative flex flex-col gap-4 max-md:row-span-1 md:top-32 md:col-span-3"
-	>
-		<img
-			class="mb-4 aspect-square w-full border-4 border-blackish object-cover dark:border-whitish"
-			src="elias_320.png"
-			srcset="elias_320.png 320w, elias_768.png 768w, elias_1024.png 1024w"
-			sizes="(max-width: 320px) 280px, (max-width: 768px) 728px, (max-width: 1024px) 984px"
-			alt="Portrait of me"
-		/>
-		<div class="flex flex-col">
+	<!-- style:transform={windowSize >= 1024 ? `translateY(${scrollY * 0.7}px)` : ''} -->
+	<aside class="relative flex flex-col gap-4 lg:top-32 lg:col-span-3">
+		<div class="flex w-full justify-center">
+			<img
+				class=" aspect-square w-full border-4 border-blackish object-cover max-lg:mt-8 lg:w-full dark:border-whitish"
+				src="elias_320.png"
+				srcset="elias_320.png 320w, elias_768.png 768w, elias_1024.png 1024w"
+				sizes="(max-width: 320px) 280px, (max-width: 768px) 728px, (max-width: 1024px) 984px"
+				alt="Portrait of me"
+			/>
+		</div>
+		<div class="flex flex-col max-md:gap-2">
 			<a href={`mailto:${about.email}`} class="text-blue-500 hover:underline dark:text-blue-300"
 				>{about.email}</a
 			>
@@ -221,7 +256,8 @@
 			>
 		</div>
 		<div
-			class="flex gap-2 overflow-x-scroll text-nowrap scrollbar-hide max-md:-mx-4 max-md:pl-4 md:flex-wrap"
+			use:autoScroll
+			class="flex gap-2 overflow-x-scroll text-nowrap scrollbar-hide max-lg:-mx-8 max-lg:px-8 lg:flex-wrap"
 		>
 			{#each about.skills as skill (skill)}
 				<Pill text={skill.text} category={skill.category}></Pill>
