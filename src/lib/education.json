@@ -42,11 +42,11 @@
 				"category": "programming"
 			},
 			{
-				"text": "Space-filling curves",
+				"text": "Space-filling Curves",
 				"category": "programming"
 			},
 			{
-				"text": "ML Saliency Prediction",
+				"text": "Saliency Prediction",
 				"category": "AI"
 			}
 		]
@@ -111,15 +111,11 @@
 				"category": "AI"
 			},
 			{
-				"text": "Neural Networks",
+				"text": "Neural Network",
 				"category": "AI"
 			},
 			{
-				"text": "TensorFlow",
-				"category": "AI"
-			},
-			{
-				"text": "Keras",
+				"text": "TensorFlow Keras",
 				"category": "AI"
 			}
 		]

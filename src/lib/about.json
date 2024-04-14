@@ -63,6 +63,10 @@
 			"category": "web"
 		},
 		{
+			"text": "Tensorflow Keras",
+			"category": "AI"
+		},
+		{
 			"text": "Git",
 			"category": "tools"
 		},

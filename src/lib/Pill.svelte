@@ -7,11 +7,10 @@
 	}
 
 	const categoryColorMap: CategoryColorMap = {
-		web: 'bg-blue-500',
-		programming: 'bg-red-500',
-		tools: 'bg-gray-500',
-		AI: 'bg-purple-500',
-		course: 'bg-indigo-500'
+		web: 'bg-[#9DAD6F]',
+		programming: 'bg-[#5E5B52]',
+		tools: 'bg-[#8DA9C4]',
+		AI: 'bg-[#E16036]'
 	};
 
 	$: colorClass = categoryColorMap[category] || 'bg-gray-500';
