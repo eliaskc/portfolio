@@ -236,8 +236,9 @@
 		</section>
 	</div>
 
-	<!-- style:transform={windowSize >= 1024 ? `translateY(${scrollY * 0.7}px)` : ''} -->
-	<aside class="relative flex flex-col gap-4 lg:top-32 lg:col-span-3">
+	<aside 
+        style:margin-top={windowSize >= 1024 ? `${scrollY * 0.8}px` : ''}
+        class="relative flex flex-col gap-4 lg:top-32 lg:col-span-3">
 		<div class="flex w-full justify-center">
 			<img
 				class=" aspect-square w-full border-4 border-blackish object-cover max-lg:mt-8 lg:w-full dark:border-whitish"
@@ -288,11 +289,5 @@
 
 	:global(h4) {
 		@apply text-xl;
-	}
-
-	@media (min-width: 768px) {
-		#image {
-			transform: translateY(calc(var(--scroll) * 0.7px));
-		}
 	}
 </style>
