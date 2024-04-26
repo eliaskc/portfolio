@@ -165,33 +165,8 @@
 				<p class="my-8 text-3xl">{paragraph}</p>
 			{/each}
 		</section>
-
-		<section id="experience">
-			<h1 class="mb-4 font-bold">{preferredLanguage === 'en' ? 'Experience' : 'Erfarenhet'}</h1>
-			{#each experience as exp (exp)}
-				<div class="mb-8">
-					<h3 class="font-semibold">
-						{#if exp.link}
-							<a href={exp.link} class="text-blue-500 hover:underline dark:text-blue-300"
-								>{exp.employer}</a
-							>
-						{:else}
-							{exp.employer}
-						{/if}
-						— <span class="font-normal italic">{exp.what[preferredLanguage]}</span>
-					</h3>
-					<p class="italic">{exp.when[preferredLanguage]}</p>
-					<p>{exp.description[preferredLanguage]}</p>
-					<div class="mt-2 flex flex-wrap gap-2">
-						{#each exp.skills as skill (skill)}
-							<Pill text={skill.text} category={skill.category}></Pill>
-						{/each}
-					</div>
-				</div>
-			{/each}
-		</section>
-
-		<section id="education">
+		
+        <section id="education">
 			<h1 class="mb-4 font-bold">{preferredLanguage === 'en' ? 'Education' : 'Utbildning'}</h1>
 			{#each education as edu (edu)}
 				<div class="mb-8 flex flex-col gap-2">
@@ -231,6 +206,31 @@
 							{/each}
 						</div>
 					{/if}
+				</div>
+			{/each}
+		</section>
+
+		<section id="experience">
+			<h1 class="mb-4 font-bold">{preferredLanguage === 'en' ? 'Experience' : 'Erfarenhet'}</h1>
+			{#each experience as exp (exp)}
+				<div class="mb-8">
+					<h3 class="font-semibold">
+						{#if exp.link}
+							<a href={exp.link} class="text-blue-500 hover:underline dark:text-blue-300"
+								>{exp.employer}</a
+							>
+						{:else}
+							{exp.employer}
+						{/if}
+						— <span class="font-normal italic">{exp.what[preferredLanguage]}</span>
+					</h3>
+					<p class="italic">{exp.when[preferredLanguage]}</p>
+					<p>{exp.description[preferredLanguage]}</p>
+					<div class="mt-2 flex flex-wrap gap-2">
+						{#each exp.skills as skill (skill)}
+							<Pill text={skill.text} category={skill.category}></Pill>
+						{/each}
+					</div>
 				</div>
 			{/each}
 		</section>
