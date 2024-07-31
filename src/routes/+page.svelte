@@ -93,11 +93,11 @@
 			<a href="#about" class="text-left text-lg hover:underline"
 				>{preferredLanguage === 'en' ? 'About me' : 'Om mig'}</a
 			>
-			<a href="#experience" class="text-left text-lg hover:underline"
-				>{preferredLanguage === 'en' ? 'Experience' : 'Erfarenhet'}</a
-			>
 			<a href="#education" class="text-left text-lg hover:underline"
 				>{preferredLanguage === 'en' ? 'Education' : 'Utbildning'}</a
+			>
+			<a href="#experience" class="text-left text-lg hover:underline"
+				>{preferredLanguage === 'en' ? 'Experience' : 'Erfarenhet'}</a
 			>
 
 			<div class="flex justify-center gap-2 text-gray-400 max-lg:hidden dark:text-gray-600">
@@ -165,8 +165,8 @@
 				<p class="my-8 text-3xl">{paragraph}</p>
 			{/each}
 		</section>
-		
-        <section id="education">
+
+		<section id="education">
 			<h1 class="mb-4 font-bold">{preferredLanguage === 'en' ? 'Education' : 'Utbildning'}</h1>
 			{#each education as edu (edu)}
 				<div class="mb-8 flex flex-col gap-2">
@@ -236,9 +236,10 @@
 		</section>
 	</div>
 
-	<aside 
-        style:margin-top={windowSize >= 1024 ? `${scrollY * 0.8}px` : ''}
-        class="relative flex flex-col gap-4 lg:top-32 lg:col-span-3">
+	<aside
+		style:margin-top={windowSize >= 1024 ? `${scrollY * 0.8}px` : ''}
+		class="relative flex flex-col gap-4 lg:top-32 lg:col-span-3"
+	>
 		<div class="flex w-full justify-center">
 			<img
 				class=" aspect-square w-full border-4 border-blackish object-cover max-lg:mt-8 lg:w-full dark:border-whitish"
