@@ -6,7 +6,11 @@
 	},
 	"email": "eliaskjellbergcarlson@gmail.com",
 	"github": "https://github.com/eliaskc",
-	"languages": ["Swedish", "English", "French (basic)"],
+	"languages": [
+		"Swedish",
+		"English",
+		"French (basic)"
+	],
 	"text": {
 		"en": [
 			"I want to build products that excite me and make a difference, whether that be by changing the world or making someone's everyday life slightly better.",
@@ -18,6 +22,10 @@
 		]
 	},
 	"skills": [
+		{
+			"text": "Swift",
+			"category": "programming"
+		},
 		{
 			"text": "Python",
 			"category": "programming"
@@ -76,6 +84,18 @@
 		},
 		{
 			"text": "Kubernetes",
+			"category": "tools"
+		},
+		{
+			"text": "Google Cloud Platform",
+			"category": "tools"
+		},
+		{
+			"text": "Amplitude",
+			"category": "tools"
+		},
+		{
+			"text": "Linear",
 			"category": "tools"
 		},
 		{

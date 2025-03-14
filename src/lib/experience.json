@@ -1,6 +1,48 @@
 [
 	{
 		"when": {
+			"en": "August 2024 - Present",
+			"sv": "Augusti 2024 - Nu"
+		},
+		"employer": "Sleep Cycle AB",
+		"what": {
+			"en": "Software Developer & Tech Lead",
+			"sv": "Utvecklare & Tech Lead"
+		},
+		"link": "https://www.sleepcycle.com/",
+		"skills": [
+			{
+				"text": "Swift",
+				"category": "programming"
+			},
+			{
+				"text": "Python",
+				"category": "programming"
+			},
+			{
+				"text": "NextJS",
+				"category": "web"
+			},
+			{
+				"text": "Tailwind CSS",
+				"category": "web"
+			},
+			{
+				"text": "Google Cloud Platform",
+				"category": "tools"
+			},
+			{
+				"text": "Amplitude",
+				"category": "tools"
+			},
+			{
+				"text": "Linear",
+				"category": "tools"
+			}
+		]
+	},
+	{
+		"when": {
 			"en": "2023",
 			"sv": "2023"
 		},

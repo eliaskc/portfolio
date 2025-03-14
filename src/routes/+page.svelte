@@ -150,7 +150,7 @@
 		class="relative flex flex-col gap-y-8 max-lg:row-span-1 max-lg:row-start-2 lg:top-48 lg:col-span-7"
 	>
 		<section id="about" class="font-medium">
-			<h1 class="z-0 mb-16 text-wrap !text-6xl font-semibold">
+			<h1 class="text-6xl! z-0 mb-16 text-wrap font-semibold">
 				{#if preferredLanguage === 'en'}
 					Hi, I'm Elias — a Software Engineer with a <i class="text-green-800 dark:text-green-300"
 						>hint</i
@@ -163,6 +163,36 @@
 			</h1>
 			{#each about.text[preferredLanguage] as paragraph (paragraph)}
 				<p class="my-8 text-3xl">{paragraph}</p>
+			{/each}
+		</section>
+
+		<section id="experience">
+			<h1 class="mb-4 font-bold">{preferredLanguage === 'en' ? 'Experience' : 'Erfarenhet'}</h1>
+			{#each experience as exp (exp)}
+				<div class="mb-8">
+					<h3 class="font-semibold">
+						{#if exp.link}
+							<a href={exp.link} class="text-blue-500 hover:underline dark:text-blue-300"
+								>{exp.employer}</a
+							>
+						{:else}
+							{exp.employer}
+						{/if}
+						— <span class="font-normal italic">{exp.what[preferredLanguage]}</span>
+					</h3>
+					<p class="italic">{exp.when[preferredLanguage]}</p>
+					{#if exp.description}
+						<p>{exp.description[preferredLanguage]}</p>
+					{/if}
+
+					{#if exp.skills && exp.skills.length > 0}
+						<div class="mt-2 flex flex-wrap gap-2">
+							{#each exp.skills as skill (skill)}
+								<Pill text={skill.text} category={skill.category}></Pill>
+							{/each}
+						</div>
+					{/if}
+				</div>
 			{/each}
 		</section>
 
@@ -209,31 +239,6 @@
 				</div>
 			{/each}
 		</section>
-
-		<section id="experience">
-			<h1 class="mb-4 font-bold">{preferredLanguage === 'en' ? 'Experience' : 'Erfarenhet'}</h1>
-			{#each experience as exp (exp)}
-				<div class="mb-8">
-					<h3 class="font-semibold">
-						{#if exp.link}
-							<a href={exp.link} class="text-blue-500 hover:underline dark:text-blue-300"
-								>{exp.employer}</a
-							>
-						{:else}
-							{exp.employer}
-						{/if}
-						— <span class="font-normal italic">{exp.what[preferredLanguage]}</span>
-					</h3>
-					<p class="italic">{exp.when[preferredLanguage]}</p>
-					<p>{exp.description[preferredLanguage]}</p>
-					<div class="mt-2 flex flex-wrap gap-2">
-						{#each exp.skills as skill (skill)}
-							<Pill text={skill.text} category={skill.category}></Pill>
-						{/each}
-					</div>
-				</div>
-			{/each}
-		</section>
 	</div>
 
 	<aside
@@ -243,8 +248,7 @@
 		<div class="flex w-full justify-center">
 			<img
 				class=" aspect-square w-full border-4 border-blackish object-cover max-lg:mt-8 lg:w-full dark:border-whitish"
-				src="elias_320.png"
-				srcset="elias_320.png 320w, elias_768.png 768w, elias_1024.png 1024w"
+				src="profile_square.jpg"
 				sizes="(max-width: 320px) 280px, (max-width: 768px) 728px, (max-width: 1024px) 984px"
 				alt="Portrait of me"
 			/>
@@ -270,10 +274,19 @@
 
 <style lang="postcss">
 	@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap');
+	@reference "../app.css";
 
 	:global(html) {
 		/* cursor: url('icons8-cursor.svg'), auto; */
-		@apply scroll-smooth bg-whitish font-bricolage-grotesque text-blackish dark:bg-blackish dark:text-whitish;
+		scroll-behavior: smooth;
+		background-color: var(--color-whitish);
+		color: var(--color-blackish);
+		font-family: 'Bricolage Grotesque', sans-serif;
+
+		@variant dark {
+			background: var(--color-blackish);
+			color: var(--color-whitish);
+		}
 	}
 
 	:global(h1) {

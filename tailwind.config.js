@@ -8,10 +8,6 @@ export default {
 			fontFamily: {
 				'instrument-serif': ['Instrument Serif', 'serif'],
 				'bricolage-grotesque': ['Bricolage Grotesque', 'sans-serif']
-			},
-			colors: {
-				whitish: '#f0f0f0',
-				blackish: '#1a1a1a'
 			}
 		}
 	},
